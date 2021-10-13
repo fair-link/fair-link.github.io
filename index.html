@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+        <body>
+
+            <h1>Fairlink: null-> f.link</h1>
+            <div>
+                <h2>Problema</h2>
+                <div>
+                    <ul class="list-bullets">
+                        <li class="mb-2">Na Europa, 1/5 de todos os alimentos produzidos são desperdiçados.</li>
+                        <li class="mb-2">Os supermercados não têm um procedimento uniforme de doação de quebras alimentares a associações.</li>
+                        <li class="mb-2">Os processos de atribuição de doações ao sector social são manuais.</li>
+                        <li class="mb-2">O levantamento de quebras em supermercados é feito por ordem de chegada.</li>
+                        <li class="mb-2">O levantamento de alimentos nas associações é feito por ordem de chegada.</li>
+                        <li class="mb-2">Não é conhecido o impacto das doações, pois não são produzidas métricas adequadas.</li>
+                      </ul> 
+                </div>
+
+            </div>
+            <div>
+                <h2>Solução Proposta</h2>
+                <p>A solução proposta é um sistema de informação que inclui uma componente web e uma componente de analítica offline:</p>
+                <div>
+                    <ul class="list-bullets">
+                        <li class="mb-2">recebe informação de quebras alimentares diariamente;</li>
+                        <li class="mb-2">faz atribuição automática a indivíduos carenciados inscritos em IPSS e outras associações do setor social;</li>
+                        <li class="mb-2">agrega lotes de doações para serem recolhidos pelas associações nas instalações dos supermercados;</li>
+                        <li class="mb-2">rastreia o percurso dos artigos doados;</li>
+                        <li class="mb-2">automatiza o registo de doações</li>
+                        <li class="mb-2">emite relatórios periódicos sobre o desempenho dos parceiros com métricas de sustentabilidade.</li>
+                      </ul> 
+                </div>
+                <br>
+                <div>
+                    <p>Distinção face a outras iniciativas que reduzem o desperdício alimentar</p>
+                    <ol class="custom-numbers">
+                        <li class="mb-2">A solução é replicável e escalável.</li>
+                        <li class="mb-2">Automatiza doação de quebras através de critérios socio-económicos documentados.</li>
+                        <li class="mb-2">Permite aferir o impacto em volume de doações, pessoas ajudadas, incluindo perceber se a doação de artigos alimentares tem efeito socio-económico a longo prazo para as populações servidas.</li>
+                    </ol>
+                </div>
+                <br>
+                <div>
+                    <p>Diagrama da solução:</p>
+                    <img class="fit" src="arch-diagram.png">
+                </div>
+            </div>
+            <section>
+                <div>
+                    <h2>Porque importa?</h2>
+                </div>
+                <div class="container box">
+                    <div class="cloud-card fixed">
+                        <p>Supermercados</p>
+                        <p>
+                            Podem medir doações e obter reconhecimento pela sustentabilidade
+                        </p>
+                    </div>
+
+                    <div class="cloud-card flex-item">
+                        <p>Sector social</p>
+                        <p>
+                            Entidades excluídas do processo de doação de quebras podem ser representadas dentro do sistema. Mais quebras são doadas a mais entidades. Processo de levantamento, transporte e doação de alimentos é simplificado através de uma aplicação de agendamento.
+                        </p>
+                    </div>
+
+                    <div class="cloud-card flex-item">
+                        <p>Indivíduos carenciados</p>
+                        <p>
+                            Mais pessoas têm acesso a artigos alimentares. Os artigos alimentares são escolhidos em quantidade e qualidade adequada ao seu agregado familiar.
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <h2>Progresso do projecto</h2>
+
+                <p>Desenvolvimento MVP (até Dez 21)</p>
+                <p>Lançamento Piloto (Jan 22)</p>
+                <p>Ampliação da rede de beneficiários/doadores e lançamento público do projecto (a partir do segundo semestre de 22)</p>
+            </section>
+
+            <a href="https://github.com/fair-link/meta/blob/master/docs/pt-PT/documento%20de%20vis%C3%A3o/doc_visao.pdf">Documento de visao</a>
+
+            
+            
+            <style>
+                body {
+                    font-family: Chivo, sans-serif;
+                    font-size: 1.1rem;
+                    letter-spacing: 0.05rem;
+                    font-weight: 300;
+                    line-height: 1.7;
+                }          
+                h2,h1 {
+                    color: #0033ad;
+                } 
+
+                .list-bullets {
+                    list-style: none;
+                }
+
+                .list-bullets li::before {
+                    content: '';
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50;
+                    background: #0033ad;
+                    border: 1px solid #0033ad;
+                    margin-right: 1rem;
+                }
+                ol.custom-numbers {
+                    list-style: none;
+                }
+
+                ol.custom-numbers li {
+                    counter-increment: my-awesome-counter;
+                }
+
+                ol.custom-numbers li::before {
+                    content: counter(my-awesome-counter) ". ";
+                    color: #0033ad;
+                    font-weight: bold;
+                }
+                #box {
+                    display: flex;
+                    column-gap: 10px;
+                }
+                .cloud-card {
+                    border: 1px solid #dadce0;
+                    background: #fff 50%/auto 100%;
+                    border-radius: 8px;
+                    box-sizing: border-box;
+                    display: flex;
+                    -moz-box-orient: vertical;
+                    -moz-box-direction: normal;
+                    -ms-flex-direction: column;
+                    flex-direction: column;
+                    min-width: 225px;
+                    overflow: hidden;
+                    position: relative;
+                    margin-left: 10px;
+                    margin-right: 10px;
+                }
+
+                .cloud-card+.cloud-card{
+                margin-left: 5px;
+                }
+                .fit {
+                    max-width: 70%;
+                    max-height: 70%;
+                    }
+                    .container{
+                        display: flex;
+                    }
+                    .fixed{
+                        width: 200px;
+                    }
+                    .flex-item{
+                        flex-grow: 1;
+                    }
+                #box {
+                display: flex;
+                width: 100px;
+                }
+            </style>
+        </body>
+</html>
